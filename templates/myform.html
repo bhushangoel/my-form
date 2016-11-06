@@ -1,11 +1,13 @@
-<form name="{{formOptions.formName}}" class="form-horizontal">
-    <div class="form-group" ng-repeat="field in formOptions.fields">
-        <label for="{{field.alias}}" class="col-sm-2 control-label">{{field.name}}
-            <span ng-if="option.required">*</span>
-        </label>
-        <div class="col-sm-10">
-            <ms-field field-type="{{field.type}}"></ms-field>
-            <!--<input type="text" name="{{}}" class="form-control" id="{{field.alias}}" ng-model="formData[field.alias]">-->
-        </div>
+<!--
+<form name="{{formOptions.formName}}" class="form-horizontal" ng-if="formOptions.templateFrameWork == 'bootstrap3'" novalidate>
+-->
+<div class="form-group" ng-repeat="field in formOptions.fields">
+    <label for="{{field.alias}}" class="col-sm-2 control-label">{{field.name}}
+        <span ng-if="option.required">*</span>
+    </label>
+    <div class="col-sm-10">
+        <ms-field field-type="{{field.type}}"></ms-field>
+        <p style="color: #B94A48">{{getData(field.alias)}}</p>
     </div>
-</form>
+</div>
+<button type="submit" class="btn btn-block" ng-click="submitForm()">Submit</button>
