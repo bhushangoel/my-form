@@ -1,47 +1,3 @@
-/*
- $scope.formOptions = {
- formName: 'signupForm',
- template: '',     //user defined template url | optional | this will override templateFrameWork option,
- templateFrameWork: 'bootstrap3',    //bootstrap, material, foundation etc | default will be bootstrap
- clickFunction: 'submitSignup',
- fields: [
- {
- name: 'First Name',
- alias: 'name',  //ng-model value so it is required
- type: 'text',   //allowed: text | textarea | checkbox | radio | select
- placeholder: 'Enter your first name',
- validations: {
- required: true,
- pattern: '',
- min: '',
- max: ''
- },
- expressionProperties: {
- disabled: 'remember'
- }
- },
- {
- name: 'Description',
- alias: 'description',
- type: 'textarea',
- validations: {
- required: true
- }
- },
- {
- name: 'Remember Me',
- alias: 'remember',
- type: 'checkbox'
- }
- ]
- }
-
- <form name="{{formOptions.formName}}" class="form-horizontal" novalidate>
- <my-form novalidate form-name="signupForm" form-options="{{formOptions}}"></my-form>
- </form>
- */
-
-
 "use strict";
 
 var myFormModule = angular.module("myFormModule", []);
@@ -51,7 +7,7 @@ myFormModule.directive("myForm", ['$compile', '$http', function ($compile, $http
         controller: 'validateController',
         link: function (scope, element, attrs) {
             var attr = JSON.parse(attrs.formOptions);
-            var template = attr.template ? attr.template : 'js/vendor/templates/myform.html';
+            var template = attr.template ? attr.template : '/templates/myform.html';
             scope.templateframeWork = attr.templateFrameWork ? attr.templateFrameWork : 'bootstrap3';
             scope.formOptions = attr;
 
