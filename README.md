@@ -134,3 +134,6 @@ Sample custom template HTML
  </div>
  <button type="submit" class="btn btn-theme" ng-click="submitForm()">Send message</button>
  ```
+
+### Report issues or submit feedback
+Any Feedback or issue is welcomed :)
