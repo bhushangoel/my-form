@@ -1,0 +1,22 @@
+{
+  "name": "myform",
+  "version": "0.0.1",
+  "description": "my form is an angularjs library used to create forms using json object",
+  "main": "my-form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhushangoel/my-form.git"
+  },
+  "keywords": [
+    "my-form"
+  ],
+  "author": "Bhushan Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhushangoel/my-form/issues"
+  },
+  "homepage": "https://github.com/bhushangoel/my-form#readme"
+}

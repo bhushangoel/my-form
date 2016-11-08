@@ -1,84 +1,149 @@
 //dummy data
 
+/*<form name="{{formOptions.formName}}" novalidate ng-if="!showMessage">
+ <my-form novalidate form-name="signupForm" form-options="{{formOptions}}"></my-form>
+ </form>*/
 /*$scope.formOptions = {
-    formName: 'contactForm',
-    template: '../../html/contactForm.html',     //user defined template url | optional | this will override templateFrameWork option,
-    templateFrameWork: 'bootstrap3',    //bootstrap, material, foundation etc | default will be bootstrap
-    clickFunction: 'send',
-    fields: [
-        {
-            name: 'Name',
-            alias: 'name',  //ng-model value so it is required
-            type: 'text',   //allowed: text | textarea | checkbox | radio | select
-            placeholder: 'Enter your name',
-            customClass: '',
-            validations: {
-                required: true
-            }
-        },
-        {
-            name: 'Email',
-            alias: 'email',
-            type: 'text',
-            placeholder: 'Enter Email Id',
-            customClass: '',
-            validations: {
-                required: true,
-                pattern: '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$'
-            }
-        },
-        {
-            name: 'Country',
-            alias: 'country',
-            type: 'select',
-            records: {
-                data: $scope.countries,
-                key: 'country_name',
-                name: 'country_name'
-            },
-            customClass: '',
-            validations: {
-                required: true
-            }
-        },
-        {
-            name: 'Phone',
-            alias: 'phone',  //ng-model value so it is required
-            type: 'text',   //allowed: text | textarea | checkbox | radio | select
-            placeholder: 'Enter your phone number',
-            customClass: '',
-            validations: {
-                required: true,
-                pattern: '^[0-9]{1,10}$'
-            }
-        },
-        {
-            name: 'Category',
-            alias: 'category',
-            type: 'select',
-            records: {
-                data: [{name: 'Fresher', value: 'fresher'}, {name: 'IT', value: 'it'}, {
-                    name: 'Professional',
-                    value: 'professional'
-                }],
-                key: 'value',
-                name: 'name'
-            },
-            customClass: '',
-            validations: {
-                required: true
-            }
-        },
-        {
-            name: 'Message',
-            alias: 'message',
-            type: 'textarea',
-            validations: {
-                required: true
-            }
-        }
-    ]
-};*/
+ formName: 'snowForum',
+ template: '<div class="form-group" ng-repeat="field in formOptions.fields">' +
+ ' <ms-field field-type="{{field.type}}"></ms-field>' +
+ ' <p style="color: #B94A48">{{getData(field.alias)}}</p>' +
+ ' </div>' +
+ '<button type="button" class="btn btn-primary" ng-click="submitForm()">Enquire Now</button>',
+ clickFunction: 'submit',
+ fields: [
+ {
+ name: 'Name',
+ alias: 'name',  //ng-model value so it is required
+ type: 'text',   //allowed: text | textarea | checkbox | radio | select
+ placeholder: 'Enter your name',
+ customClass: '',
+ validations: {
+ required: true
+ }
+ },
+ {
+ name: 'Email',
+ alias: 'email',
+ type: 'text',
+ placeholder: 'Enter Email Id',
+ customClass: '',
+ validations: {
+ required: true,
+ pattern: '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$'
+ }
+ },
+ {
+ name: 'Title',
+ alias: 'title',
+ type: 'text',
+ placeholder: 'Enter title',
+ validations: {
+ required: true
+ }
+ },
+ {
+ name: 'Description',
+ alias: 'description',
+ type: 'textarea',
+ validations: {
+ required: true
+ }
+ }
+ ]
+ };*/
+
+
+/*
+ <div class="form-group" ng-repeat="field in formOptions.fields">
+ <div class="form-group name">
+ <label for="{{field.alias}}">{{field.name}}</label>
+ <ms-field field-type="{{field.type}}"></ms-field>
+ <p style="color: #B94A48">{{getData(field.alias)}}</p>
+ </div>
+ </div>
+ <button type="submit" class="btn btn-theme" ng-click="submitForm()">Send message</button>
+ */
+/*$scope.formOptions = {
+ formName: 'contactForm',
+ templateUrl: '../../html/contactForm.html',     //user defined template url | optional | this will override templateFrameWork option,
+ template: '',
+ templateFrameWork: 'bootstrap3',    //bootstrap, material, foundation etc | default will be bootstrap
+ clickFunction: 'send',
+ fields: [
+ {
+ name: 'Name',
+ alias: 'name',  //ng-model value so it is required
+ type: 'text',   //allowed: text | textarea | checkbox | radio | select
+ placeholder: 'Enter your name',
+ customClass: '',
+ validations: {
+ required: true
+ }
+ },
+ {
+ name: 'Email',
+ alias: 'email',
+ type: 'text',
+ placeholder: 'Enter Email Id',
+ customClass: '',
+ validations: {
+ required: true,
+ pattern: '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$'
+ }
+ },
+ {
+ name: 'Country',
+ alias: 'country',
+ type: 'select',
+ records: {
+ data: $scope.countries,
+ key: 'country_name',
+ name: 'country_name'
+ },
+ customClass: '',
+ validations: {
+ required: true
+ }
+ },
+ {
+ name: 'Phone',
+ alias: 'phone',  //ng-model value so it is required
+ type: 'text',   //allowed: text | textarea | checkbox | radio | select
+ placeholder: 'Enter your phone number',
+ customClass: '',
+ validations: {
+ required: true,
+ pattern: '^[0-9]{1,10}$'
+ }
+ },
+ {
+ name: 'Category',
+ alias: 'category',
+ type: 'select',
+ records: {
+ data: [{name: 'Fresher', value: 'fresher'}, {name: 'IT', value: 'it'}, {
+ name: 'Professional',
+ value: 'professional'
+ }],
+ key: 'value',
+ name: 'name'
+ },
+ customClass: '',
+ validations: {
+ required: true
+ }
+ },
+ {
+ name: 'Message',
+ alias: 'message',
+ type: 'textarea',
+ validations: {
+ required: true
+ }
+ }
+ ]
+ };*/
 
 "use strict";
 
@@ -95,7 +160,7 @@ myFormModule.directive("myForm", ['$compile', '$http', function ($compile, $http
                     scope.templateframeWork = attr.templateFrameWork ? attr.templateFrameWork : 'bootstrap3';
                     scope.formOptions = attr;
 
-                    if (attr.template) {
+                    if (attr.templateUrl) {
                         $http.get(template)
                             .success(function (result) {
                                 element.html(result).show();
@@ -152,7 +217,6 @@ myFormModule.directive("myFormSelect", [function () {
     return {
         restrict: 'A',
         scope: true,
-        // template: '<select class="form-control" ng-options="record[field.records.key] as record[field.records.name] for record in field.records.data" name="{{field.alias}}" id="{{field.alias}}" ng-model="formData[field.alias]"> <option value="">Select Option</option> </select>'
         template: '<select class="form-control" name="{{field.alias}}" id="{{field.alias}}" ng-model="formData[field.alias]"> <option value="">Select Option</option><option ng-repeat="record in field.records.data" value="record[field.records.key]">{{record[field.records.name]}}</option> </select>'
     }
 }]);
@@ -213,12 +277,12 @@ myFormModule.controller('validateController', ['$scope', function ($scope) {
 
         function checkValidation(cb) {
             $scope.formError = {};
+            $scope.errorMsg = {};
             var formOk = false;
             angular.forEach($scope.formOptions.fields, function (field) {
                 $scope.formError[field.alias] = field.validations;
             });
 
-            console.log('$scope.formError: ', $scope.formError)
             for (var key in $scope.formError) {
                 if (!$scope.formData[key]) {
                     if ($scope.formError[key] && $scope.formError[key].required) {
