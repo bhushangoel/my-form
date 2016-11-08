@@ -9,7 +9,7 @@ my-form is a library to create forms dynamically for angularJs using JSON data.
 $ npm install my-form
 ```
 
-and then a <script> tag in your HTML file
+and then add script tag in your HTML file
 
 ```sh
 <script type="text/javascript" src="/node_modules/myform/myform.js"></script>
@@ -115,7 +115,7 @@ fields                          array of fields                     required
 fields[0].name                  name of field                       required
 fields[0].alias                 model value of field                required
 fields[0].type                  field type                          required                                   (text, textarea, checkbox, select)               
-fields[0].records.data          data for dropdown                   required if                                                                 type is select
+fields[0].records.data          data for dropdown                   required if type is select                                 
 fields[0].records.key           model value for select              required
 fields[0].records.name          display name for select             required
 fields[0].placeholder           placeholder                         optional
