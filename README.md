@@ -44,7 +44,7 @@ $scope.formOptions = {
         {
             name: 'Name',
             alias: 'name',  //ng-model value so it is required
-            type: 'text',   //allowed: text | textarea | checkbox | radio | select
+            type: 'text',   //allowed: text | textarea | checkbox | select
             placeholder: 'Enter your name',
             validations: {
                 required: true
@@ -114,12 +114,12 @@ clickFunction                   function to be execute on submit    required
 fields                          array of fields                     required
 fields[0].name                  name of field                       required
 fields[0].alias                 model value of field                required
-fields[0].type                  field type                          required                                   (text, textarea, checkbox, select)               
+fields[0].type                  field type                          required (text, textarea, checkbox, select)               
 fields[0].records.data          data for dropdown                   required if type is select                                 
 fields[0].records.key           model value for select              required
 fields[0].records.name          display name for select             required
 fields[0].placeholder           placeholder                         optional
-fields[0].validations           validations                         optional                                   (required, pattern, min, max)                      
+fields[0].validations           validations                         optional (required, pattern, min, max)                      
 ```
 
 Sample custom template HTML 
