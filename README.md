@@ -1,6 +1,11 @@
 # my-form
 my-form is a library to create forms dynamically for angularJs using JSON data.
 
+### Prerequisites
+Supported versions
+- Angular upto v1.5
+- Bootstrap 3
+
 ### Installation
 
 - via npm
